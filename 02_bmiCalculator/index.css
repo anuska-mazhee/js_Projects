@@ -1,0 +1,16 @@
+body{
+    background-color: #212121;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 400px;
+    height: 200px;
+    background-color: pink;
+    border-radius: 12px;
+    border-color: #212121;
+}
