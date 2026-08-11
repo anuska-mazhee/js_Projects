@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #212121;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container{
+            color: #fff;
+        }
+
+        #display{
+            font-size: 24px;;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            width: 200px;
+            background-color: orange;
+            color: #fff;
+            border-radius: 12px;;
+        }
+    </style>
+    
+    <div class="container">
+        <h1>Your Local Time</h1></div>
+    <div id="display"></div>
+    <script src="index.js"></script>
+</body>
+</html>
