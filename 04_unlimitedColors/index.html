@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Change Color</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const colorchange = function(){
+        const hex = '0123456789ABCDEF';
+        let color = "#";
+
+        for(let i = 0;i<6;i++){
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    console.log(colorchange())
+    let intervalId
+    const changeMe = function(){
+        if(!intervalId){
+            intervalId= setInterval(changebgColor,1000)
+        }
+        function changebgColor(){
+            document.body.style.backgroundColor = colorchange();
+        };
+    } 
+    const nochange = function(){
+        //Cleaning up the old intervalId values
+        clearInterval(intervalId)
+        intervalId = null;
+    }
+    //Event listening for start and stop buttons.
+    document.querySelector('#start').addEventListener('click', changeMe);
+    document.querySelector('#stop').addEventListener('click', nochange);
+</script>
+</html>
